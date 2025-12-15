@@ -1,3 +1,15 @@
+struct Dollar {
+    amount: i32
+}
+impl Dollar {
+    fn new(_amount: i32) -> Dollar {
+        Dollar { amount: 0}
+    }
+
+    fn times(&self, _amount: i32) {
+    }
+}
+
 
 #[cfg(test)]
 mod tests {
