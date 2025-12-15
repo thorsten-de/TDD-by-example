@@ -3,10 +3,11 @@ struct Dollar {
 }
 impl Dollar {
     fn new(amount: i32) -> Dollar {
-        Dollar { amount: amount *2 }
+        Dollar { amount }
     }
 
-    fn times(&self, _amount: i32) {
+    fn times(&mut self, multiplier: i32) {
+        self.amount *= 2;
     }
 }
 
@@ -17,7 +18,7 @@ mod tests {
 
     #[test]
     fn test_multiplication() {
-        let five = Dollar::new(5);
+        let mut five = Dollar::new(5);
         five.times(2);
         assert_eq!(10, five.amount);
     }
