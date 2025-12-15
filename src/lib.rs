@@ -7,7 +7,7 @@ impl Dollar {
     }
 
     fn times(&mut self, multiplier: i32) {
-        self.amount *= 2;
+        self.amount *= multiplier;
     }
 }
 
