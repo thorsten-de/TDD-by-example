@@ -2,8 +2,8 @@ struct Dollar {
     amount: i32
 }
 impl Dollar {
-    fn new(_amount: i32) -> Dollar {
-        Dollar { amount: 5*2 }
+    fn new(amount: i32) -> Dollar {
+        Dollar { amount: amount *2 }
     }
 
     fn times(&self, _amount: i32) {
