@@ -3,7 +3,7 @@ struct Dollar {
 }
 impl Dollar {
     fn new(_amount: i32) -> Dollar {
-        Dollar { amount: 0}
+        Dollar { amount: 10}
     }
 
     fn times(&self, _amount: i32) {
