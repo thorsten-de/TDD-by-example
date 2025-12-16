@@ -24,9 +24,9 @@ As in the book, we track progress in a todo list here.
 - [x] <s>Equal null</s> is not idiomatic in safe Rust code
 - [ ] Equal objects 
 - [x] <s>Common equals</s> is not needed: Rust offers traits for this
-- [ ] Common times
+- [x] Common times
 - [x] Compare Francs with Dollars (and vice versa)
-- [ ] Currency?
+- [x] Currency?
 
 ## Using Rust
 
