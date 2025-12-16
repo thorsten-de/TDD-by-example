@@ -52,5 +52,8 @@ mod tests {
     fn test_equality() {
         assert_eq!(Dollar::new(5), Dollar::new(5));
         assert_ne!(Dollar::new(5), Dollar::new(10));
+
+        assert_eq!(Franc::new(5), Franc::new(5));
+        assert_ne!(Franc::new(5), Franc::new(10));
     }
 }
