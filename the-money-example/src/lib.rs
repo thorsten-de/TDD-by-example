@@ -39,19 +39,9 @@ mod tests {
     }
 
     #[test]
-    fn test_franc_multiplication() {
-        let five = Money::franc(5);
-        assert_eq!(Money::franc(10), five.times(2));
-        assert_eq!(Money::franc(15), five.times(3));
-    }
-
-    #[test]
     fn test_equality() {
         assert_eq!(Money::dollar(5), Money::dollar(5));
         assert_ne!(Money::dollar(5), Money::dollar(10));
-
-        assert_eq!(Money::franc(5), Money::franc(5));
-        assert_ne!(Money::franc(5), Money::franc(10));
 
         assert_ne!(Money::franc(5), Money::dollar(5));
         assert_ne!(Money::dollar(5), Money::franc(5));

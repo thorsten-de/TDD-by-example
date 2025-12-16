@@ -27,7 +27,7 @@ As in the book, we track progress in a todo list here.
 - [x] Common times
 - [x] Compare Francs with Dollars (and vice versa)
 - [x] Currency?
-- [ ] Remove test duplicates for Franc equality and multiplication
+- [x] Remove test duplicates for Franc equality and multiplication
 
 ## Using Rust
 
