@@ -13,7 +13,22 @@ mod money {
             Dollar::new(self.amount * multiplier)
         }
     }
+    #[derive(PartialEq, Eq, Debug)]
+    pub struct Franc {
+        amount: i32
+    }
+
+    impl Franc {
+        pub fn new(amount: i32) -> Franc {
+            Franc { amount }
+        }
+
+        pub fn times(&self, multiplier: i32) -> Franc {
+            Franc::new(self.amount * multiplier)
+        }
+    }
 }
+
 
 
 #[cfg(test)]
