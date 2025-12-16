@@ -1,58 +1,26 @@
 mod money {
     #[derive(PartialEq, Eq, Debug)]
-    pub struct Dollar {
+    pub struct Money {
         amount: i32,
         currency: Currency
     }
 
-    impl Dollar {
-        pub fn times(&self, multiplier: i32) -> Dollar {
-            Dollar { amount: self.amount * multiplier, currency: self.currency.clone() }
-        }
-
-        pub fn currency(&self) -> &Currency {
-            &self.currency
-        }
-    }
-
-    impl PartialEq<Franc> for Dollar {
-        fn eq(&self, _other: &Franc) -> bool {
-            false
-        }
-    }
-
-    #[derive(PartialEq, Eq, Debug)]
-    pub struct Franc {
-        amount: i32,
-        currency: Currency
-    }
-
-    impl Franc {
-        pub fn times(&self, multiplier: i32) -> Franc {
-            Franc { amount: self.amount * multiplier, currency: self.currency.clone() }
-        }
-
-        pub fn currency(&self) -> &Currency {
-            &self.currency
-        }
-    }
-
-    impl PartialEq<Dollar> for Franc {
-        fn eq(&self, _other: &Dollar) -> bool {
-            false
-        }
-    }
-
-    pub struct Money;
     impl Money{
-        pub fn dollar(amount: i32) -> Dollar {
-            Dollar { amount, currency: "USD".into() }
+        pub fn dollar(amount: i32) -> Money {
+            Money { amount, currency: "USD".into() }
         }
 
-        pub fn franc(amount: i32) -> Franc {
-            Franc { amount, currency: "CHF".into() }
+        pub fn franc(amount: i32) -> Money {
+            Money { amount, currency: "CHF".into() }
         }
 
+        pub fn times(&self, multiplier: i32) -> Money {
+            Money { amount: self.amount * multiplier, currency: self.currency.clone() }
+        }
+
+        pub fn currency(&self) -> &Currency {
+            &self.currency
+        }
     }
 
     type Currency = String;

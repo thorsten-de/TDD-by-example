@@ -20,13 +20,14 @@ As in the book, we track progress in a todo list here.
 - [x] `equals()`
 - [ ] HashCode?
 - [x] `5 CHF * 2` = `10 CHF`
-- [ ] Dollar/Franc duplication
+- [x] Dollar/Franc duplication
 - [x] <s>Equal null</s> is not idiomatic in safe Rust code
 - [ ] Equal objects 
 - [x] <s>Common equals</s> is not needed: Rust offers traits for this
 - [x] Common times
 - [x] Compare Francs with Dollars (and vice versa)
 - [x] Currency?
+- [ ] Remove test duplicates for Franc equality and multiplication
 
 ## Using Rust
 
