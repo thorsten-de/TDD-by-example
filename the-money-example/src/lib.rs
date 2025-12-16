@@ -25,10 +25,10 @@ mod tests {
         let five = Dollar::new(5);
 
         let product: Dollar = five.times(2);
-        assert_eq!(10, product.amount);
+        assert_eq!(Dollar::new(10), product);
 
         let product: Dollar = five.times(3);
-        assert_eq!(15, product.amount);
+        assert_eq!(Dollar::new(15), product);
     }
 
     #[test]
