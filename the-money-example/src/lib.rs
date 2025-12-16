@@ -55,5 +55,7 @@ mod tests {
 
         assert_eq!(Franc::new(5), Franc::new(5));
         assert_ne!(Franc::new(5), Franc::new(10));
+
+        assert_ne!(Franc::new(5), Dollar::new(5));
     }
 }

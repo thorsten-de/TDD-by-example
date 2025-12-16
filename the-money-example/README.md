@@ -25,6 +25,7 @@ As in the book, we track progress in a todo list here.
 - [ ] Equal objects 
 - [x] <s>Common equals</s> is not needed: Rust offers traits for this
 - [ ] Common times
+- [ ] Compare Francs with Dollars
 
 ## Using Rust
 
