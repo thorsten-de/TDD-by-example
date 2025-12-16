@@ -1,6 +1,7 @@
 struct Dollar {
     amount: i32
 }
+
 impl Dollar {
     fn new(amount: i32) -> Dollar {
         Dollar { amount }
@@ -25,5 +26,10 @@ mod tests {
 
         let product: Dollar = five.times(3);
         assert_eq!(15, product.amount);
+    }
+
+    #[test]
+    fn test_equality() {
+        assert_eq!(Dollar::new(5), Dollar::new(5));
     }
 }

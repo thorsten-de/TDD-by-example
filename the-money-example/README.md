@@ -17,3 +17,14 @@ As in the book, we track progress in a todo list here.
 - [ ] Make `amount` private
 - [x] Dollar side effects?
 - [ ] Money rounding?
+- [ ] `equals()`
+
+## Using Rust
+
+### Equality and Hashing 
+
+In Rust, we can `derive(PartialEq, Eq, Hash) ` to derive the traits for both 
+equality and hashing if all fields of our structure implement them.
+See 
+- https://doc.rust-lang.org/std/hash/trait.Hash.html#hash-and-eq
+- https://doc.rust-lang.org/std/cmp/trait.Eq.html
