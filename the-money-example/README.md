@@ -19,6 +19,7 @@ As in the book, we track progress in a todo list here.
 - [ ] Money rounding?
 - [x] `equals()`
 - [ ] HashCode?
+- [ ] `5 CHF * 2` = `10 CHF`
 
 ## Using Rust
 
