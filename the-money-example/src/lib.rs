@@ -13,6 +13,13 @@ mod money {
             Dollar::new(self.amount * multiplier)
         }
     }
+
+    impl PartialEq<Franc> for Dollar {
+        fn eq(&self, _other: &Franc) -> bool {
+            false
+        }
+    }
+
     #[derive(PartialEq, Eq, Debug)]
     pub struct Franc {
         amount: i32

@@ -25,7 +25,7 @@ As in the book, we track progress in a todo list here.
 - [ ] Equal objects 
 - [x] <s>Common equals</s> is not needed: Rust offers traits for this
 - [ ] Common times
-- [ ] Compare Francs with Dollars
+- [x] Compare Francs with Dollars (and vice versa)
 
 ## Using Rust
 
@@ -53,3 +53,7 @@ There is no inheritance on the struct level in Rust, so we skip chapter 6 about 
 a `Money`, a common subclass for `Dollar` and `Franc`. There is no need to extract equals, as Rust
 has defined the behavior of equality in the `Eq` and `PartialEq` traits. We derive them for each 
 of our two structs, so there's nothing to gain for us at the moment.
+
+Comparing `Dollar` and `Franc` structs is possible with implementing `PartialEq<Dollar> for Franc` and
+vice versa. This differs from the books implementation based on a superclass implementing equals for 
+both cases directly.
