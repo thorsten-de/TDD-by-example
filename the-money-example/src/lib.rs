@@ -41,8 +41,17 @@ mod money {
         }
     }
 
-}
+    pub struct Money;
+    impl Money{
+        pub fn dollar(amount: i32) -> Dollar {
+            Dollar { amount }
+        }
 
+        pub fn franc(amount: i32) -> Franc {
+            Franc { amount }
+        }
+    }
+}
 
 
 #[cfg(test)]
@@ -51,27 +60,27 @@ mod tests {
 
     #[test]
     fn test_multiplication() {
-        let five = Dollar::new(5);
-        assert_eq!(Dollar::new(10), five.times(2));
-        assert_eq!(Dollar::new(15), five.times(3));
+        let five = Money::dollar(5);
+        assert_eq!(Money::dollar(10), five.times(2));
+        assert_eq!(Money::dollar(15), five.times(3));
     }
 
     #[test]
     fn test_franc_multiplication() {
-        let five = Franc::new(5);
-        assert_eq!(Franc::new(10), five.times(2));
-        assert_eq!(Franc::new(15), five.times(3));
+        let five = Money::franc(5);
+        assert_eq!(Money::franc(10), five.times(2));
+        assert_eq!(Money::franc(15), five.times(3));
     }
 
     #[test]
     fn test_equality() {
-        assert_eq!(Dollar::new(5), Dollar::new(5));
-        assert_ne!(Dollar::new(5), Dollar::new(10));
+        assert_eq!(Money::dollar(5), Money::dollar(5));
+        assert_ne!(Money::dollar(5), Money::dollar(10));
 
-        assert_eq!(Franc::new(5), Franc::new(5));
-        assert_ne!(Franc::new(5), Franc::new(10));
+        assert_eq!(Money::franc(5), Money::franc(5));
+        assert_ne!(Money::franc(5), Money::franc(10));
 
-        assert_ne!(Franc::new(5), Dollar::new(5));
-        assert_ne!(Dollar::new(5), Franc::new(5));
+        assert_ne!(Money::franc(5), Money::dollar(5));
+        assert_ne!(Money::dollar(5), Money::franc(5));
     }
 }

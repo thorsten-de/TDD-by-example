@@ -26,6 +26,7 @@ As in the book, we track progress in a todo list here.
 - [x] <s>Common equals</s> is not needed: Rust offers traits for this
 - [ ] Common times
 - [x] Compare Francs with Dollars (and vice versa)
+- [ ] Currency?
 
 ## Using Rust
 
@@ -57,3 +58,13 @@ of our two structs, so there's nothing to gain for us at the moment.
 Comparing `Dollar` and `Franc` structs is possible with implementing `PartialEq<Dollar> for Franc` and
 vice versa. This differs from the books implementation based on a superclass implementing equals for 
 both cases directly.
+
+### Chapter 8 - Using Money superclass in test
+
+We must adapt to Rust a bit in this part, as it is clumsy to define and use a trait for the two 
+money structs. This includes dynamic dispatch, and will be overkill to introduce as we want to
+consolidate into only one struct anyway.
+
+Therefore, we try to unify `Dollar` and `Franc` to the point of having identical implementions.
+A *diffentiator* is needed to prevent that equality will mix up different currencies, and with
+that in mind we follow chapter 9.
