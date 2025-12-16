@@ -49,6 +49,7 @@ mod tests {
         assert_eq!(Dollar::new(15), five.times(3));
     }
 
+    #[test]
     fn test_franc_multiplication() {
         let five = Franc::new(5);
         assert_eq!(Franc::new(10), five.times(2));
