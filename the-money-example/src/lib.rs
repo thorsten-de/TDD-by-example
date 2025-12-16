@@ -8,6 +8,10 @@ mod money {
         pub fn times(&self, multiplier: i32) -> Dollar {
             Dollar { amount: self.amount * multiplier }
         }
+
+        pub fn currency(&self) -> &Currency {
+            "USD"
+        }
     }
 
     impl PartialEq<Franc> for Dollar {
@@ -24,6 +28,10 @@ mod money {
     impl Franc {
         pub fn times(&self, multiplier: i32) -> Franc {
             Franc { amount: self.amount * multiplier }
+        }
+
+        pub fn currency(&self) -> &Currency {
+            "CHF"
         }
     }
 
@@ -42,7 +50,10 @@ mod money {
         pub fn franc(amount: i32) -> Franc {
             Franc { amount }
         }
+
     }
+
+    type Currency = str;
 }
 
 
