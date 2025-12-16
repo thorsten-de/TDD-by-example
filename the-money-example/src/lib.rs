@@ -27,6 +27,13 @@ mod money {
             Franc::new(self.amount * multiplier)
         }
     }
+
+    impl PartialEq<Dollar> for Franc {
+        fn eq(&self, other: &Dollar) -> bool {
+            true
+        }
+    }
+
 }
 
 
