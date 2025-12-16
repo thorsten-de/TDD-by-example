@@ -41,7 +41,7 @@ mod money {
 #[cfg(test)]
 mod tests {
     use super::money::*;
-    
+
     #[test]
     fn test_multiplication() {
         let five = Dollar::new(5);
@@ -65,5 +65,6 @@ mod tests {
         assert_ne!(Franc::new(5), Franc::new(10));
 
         assert_ne!(Franc::new(5), Dollar::new(5));
+        assert_ne!(Dollar::new(5), Franc::new(5));
     }
 }
