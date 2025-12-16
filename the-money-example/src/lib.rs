@@ -5,12 +5,8 @@ mod money {
     }
 
     impl Dollar {
-        pub fn new(amount: i32) -> Dollar {
-            Dollar { amount }
-        }
-
         pub fn times(&self, multiplier: i32) -> Dollar {
-            Dollar::new(self.amount * multiplier)
+            Dollar { amount: self.amount * multiplier }
         }
     }
 
@@ -26,12 +22,8 @@ mod money {
     }
 
     impl Franc {
-        pub fn new(amount: i32) -> Franc {
-            Franc { amount }
-        }
-
         pub fn times(&self, multiplier: i32) -> Franc {
-            Franc::new(self.amount * multiplier)
+            Franc { amount: self.amount * multiplier }
         }
     }
 
