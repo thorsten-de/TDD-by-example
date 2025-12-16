@@ -5,7 +5,7 @@ struct Dollar {
 
 impl PartialEq for Dollar {
     fn eq(&self, other: &Self) -> bool {
-        true
+        self.amount == other.amount
     }
 }
 
