@@ -7,7 +7,7 @@ mod money {
 
     impl Dollar {
         pub fn times(&self, multiplier: i32) -> Dollar {
-            Dollar { amount: self.amount * multiplier }
+            Dollar { amount: self.amount * multiplier, currency: "USD".into() }
         }
 
         pub fn currency(&self) -> &Currency {
@@ -29,7 +29,7 @@ mod money {
 
     impl Franc {
         pub fn times(&self, multiplier: i32) -> Franc {
-            Franc { amount: self.amount * multiplier }
+            Franc { amount: self.amount * multiplier, currency: "CHF".into() }
         }
 
         pub fn currency(&self) -> &Currency {
@@ -46,11 +46,11 @@ mod money {
     pub struct Money;
     impl Money{
         pub fn dollar(amount: i32) -> Dollar {
-            Dollar { amount }
+            Dollar { amount, currency: "USD".into() }
         }
 
         pub fn franc(amount: i32) -> Franc {
-            Franc { amount }
+            Franc { amount, currency: "CHF".into() }
         }
 
     }
