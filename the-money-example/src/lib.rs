@@ -1,7 +1,8 @@
 mod money {
     #[derive(PartialEq, Eq, Debug)]
     pub struct Dollar {
-        amount: i32
+        amount: i32,
+        currency: Currency
     }
 
     impl Dollar {
@@ -10,7 +11,7 @@ mod money {
         }
 
         pub fn currency(&self) -> &Currency {
-            "USD"
+            &self.currency
         }
     }
 
@@ -22,7 +23,8 @@ mod money {
 
     #[derive(PartialEq, Eq, Debug)]
     pub struct Franc {
-        amount: i32
+        amount: i32,
+        currency: Currency
     }
 
     impl Franc {
@@ -31,7 +33,7 @@ mod money {
         }
 
         pub fn currency(&self) -> &Currency {
-            "CHF"
+            &self.currency
         }
     }
 
@@ -53,7 +55,7 @@ mod money {
 
     }
 
-    type Currency = str;
+    type Currency = String;
 }
 
 
