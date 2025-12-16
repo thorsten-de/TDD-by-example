@@ -1,22 +1,24 @@
-#[derive(PartialEq, Eq, Debug)]
-struct Dollar {
-    amount: i32
-}
-
-impl Dollar {
-    fn new(amount: i32) -> Dollar {
-        Dollar { amount }
+mod money {
+    #[derive(PartialEq, Eq, Debug)]
+    pub struct Dollar {
+        pub amount: i32
     }
 
-    fn times(&self, multiplier: i32) -> Dollar {
-        Dollar::new(self.amount * multiplier)
+    impl Dollar {
+        pub fn new(amount: i32) -> Dollar {
+            Dollar { amount }
+        }
+
+        pub fn times(&self, multiplier: i32) -> Dollar {
+            Dollar::new(self.amount * multiplier)
+        }
     }
 }
 
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    use super::money::*;
 
     #[test]
     fn test_multiplication() {

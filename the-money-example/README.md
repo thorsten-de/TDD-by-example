@@ -29,3 +29,13 @@ equality and hashing if all fields of our structure implement them.
 See 
 - https://doc.rust-lang.org/std/hash/trait.Hash.html#hash-and-eq
 - https://doc.rust-lang.org/std/cmp/trait.Eq.html
+
+### Encapsulation with Modules
+
+Encapsulation and Information Hiding in Rust is done with 
+[Modules](https://doc.rust-lang.org/rust-by-example/mod.html). These
+constrain visibility on different levels:
+
+- Structs
+- Fields inside structs
+- Methods implemented on Structs
