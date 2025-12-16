@@ -17,7 +17,8 @@ As in the book, we track progress in a todo list here.
 - [ ] Make `amount` private
 - [x] Dollar side effects?
 - [ ] Money rounding?
-- [ ] `equals()`
+- [x] `equals()`
+- [ ] HashCode?
 
 ## Using Rust
 

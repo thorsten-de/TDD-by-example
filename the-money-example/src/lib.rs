@@ -1,15 +1,7 @@
-#[derive(Debug)]
+#[derive(PartialEq, Eq, Debug)]
 struct Dollar {
     amount: i32
 }
-
-impl PartialEq for Dollar {
-    fn eq(&self, other: &Self) -> bool {
-        self.amount == other.amount
-    }
-}
-
-impl Eq for Dollar {}
 
 impl Dollar {
     fn new(amount: i32) -> Dollar {
