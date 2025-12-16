@@ -75,4 +75,10 @@ mod tests {
         assert_ne!(Money::franc(5), Money::dollar(5));
         assert_ne!(Money::dollar(5), Money::franc(5));
     }
+
+    #[test]
+    fn test_currency() {
+        assert_eq!("USD", Money::dollar(1).currency());
+        assert_eq!("CHF", Money::franc(1).currency());
+    }
 }
