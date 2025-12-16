@@ -7,7 +7,7 @@ mod money {
 
     impl Dollar {
         pub fn times(&self, multiplier: i32) -> Dollar {
-            Dollar { amount: self.amount * multiplier, currency: "USD".into() }
+            Dollar { amount: self.amount * multiplier, currency: self.currency.clone() }
         }
 
         pub fn currency(&self) -> &Currency {
@@ -29,7 +29,7 @@ mod money {
 
     impl Franc {
         pub fn times(&self, multiplier: i32) -> Franc {
-            Franc { amount: self.amount * multiplier, currency: "CHF".into() }
+            Franc { amount: self.amount * multiplier, currency: self.currency.clone() }
         }
 
         pub fn currency(&self) -> &Currency {
