@@ -21,7 +21,9 @@ As in the book, we track progress in a todo list here.
 - [ ] HashCode?
 - [x] `5 CHF * 2` = `10 CHF`
 - [ ] Dollar/Franc duplication
-- [ ] Common equals
+- [x] <s>Equal null</s> is not idiomatic in safe Rust code
+- [ ] Equal objects 
+- [x] <s>Common equals</s> is not needed: Rust offers traits for this
 - [ ] Common times
 
 ## Using Rust
@@ -43,3 +45,10 @@ constrain visibility on different levels:
 - Structs
 - Fields inside structs
 - Methods implemented on Structs
+
+### No class inheritance in Rust
+
+There is no inheritance on the struct level in Rust, so we skip chapter 6 about moving equals to
+a `Money`, a common subclass for `Dollar` and `Franc`. There is no need to extract equals, as Rust
+has defined the behavior of equality in the `Eq` and `PartialEq` traits. We derive them for each 
+of our two structs, so there's nothing to gain for us at the moment.
