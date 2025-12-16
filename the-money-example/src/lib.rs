@@ -29,8 +29,8 @@ mod money {
     }
 
     impl PartialEq<Dollar> for Franc {
-        fn eq(&self, other: &Dollar) -> bool {
-            true
+        fn eq(&self, _other: &Dollar) -> bool {
+            false
         }
     }
 
@@ -41,7 +41,7 @@ mod money {
 #[cfg(test)]
 mod tests {
     use super::money::*;
-
+    
     #[test]
     fn test_multiplication() {
         let five = Dollar::new(5);
