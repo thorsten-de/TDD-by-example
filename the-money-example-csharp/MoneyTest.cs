@@ -25,5 +25,7 @@ public class MoneyTest
         Assert.NotEqual(new Dollar(5), new Dollar(6));
         Assert.Equal(new Franc(5), new Franc(5));
         Assert.NotEqual(new Franc(5), new Franc(6));
+
+        Assert.NotEqual<Money>(new Franc(5), new Dollar(5));
     }
 }
