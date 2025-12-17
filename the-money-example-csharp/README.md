@@ -16,4 +16,7 @@ We track our progress with the following To-Do list:
 - [ ] `GetHashCode()`
 - [ ] Equal null
 - [ ] Equal object
-- [ ] `5 CHF * 2 = 10 CHF`
+- [x] `5 CHF * 2 = 10 CHF`
+- [ ] Dollar/Franc duplication
+- [ ] Common equals
+- [ ] Common times
