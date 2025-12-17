@@ -18,5 +18,6 @@ We track our progress with the following To-Do list:
 - [ ] Equal object
 - [x] `5 CHF * 2 = 10 CHF`
 - [ ] Dollar/Franc duplication
-- [ ] Common equals
+- [x] Common equals
 - [ ] Common times
+- [ ] Compare Francs to Dollars
