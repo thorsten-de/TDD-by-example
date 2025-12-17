@@ -12,4 +12,10 @@ public class MoneyTest
         product = five.Times(3);
         Assert.Equal(15, product.Amount);
     }
+    
+    [Fact]
+    public void TestEquality()
+    {
+        Assert.Equal(new Dollar(5), new Dollar(5));
+    }
 }
