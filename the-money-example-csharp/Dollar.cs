@@ -4,20 +4,20 @@ namespace Tdd.Money;
 
 public class Dollar: IEquatable<Dollar>
 {
-    public int Amount { get; private set; }
+    private readonly int _amount;
     
     public Dollar(int amount)
     {
-        Amount = amount;
+        _amount = amount;
     }
 
     public Dollar Times(int multiplier) =>
-        new Dollar(Amount * multiplier);
+        new Dollar(_amount * multiplier);
 
 
     public bool Equals(Dollar? other) =>
         other is not null &&
-        Amount == other.Amount;
+        _amount == other._amount;
 
     public override bool Equals(object? other) =>
         other is Dollar dollar && Equals(dollar);
