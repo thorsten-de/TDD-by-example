@@ -9,8 +9,8 @@ public class Dollar
         Amount = amount;
     }
 
-    public void Times(int times)
+    public void Times(int multiplier)
     {
-        Amount = 2 * Amount;
+        Amount = multiplier * Amount;
     }
 }
