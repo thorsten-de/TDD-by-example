@@ -10,5 +10,5 @@ We track our progress with the following To-Do list:
 - [ ] `$5 + 10 CHF = $10` if rate is `2:1`
 - [x] `$5 * 2 = $10`
 - [ ] Make `Amount` private
-- [ ] Dollar side effects?
+- [x] Dollar side effects?
 - [ ] Money rounding?

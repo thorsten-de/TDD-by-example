@@ -9,9 +9,6 @@ public class Dollar
         Amount = amount;
     }
 
-    public Dollar Times(int multiplier)
-    {
-        Amount *= multiplier;
-        return null;
-    }
+    public Dollar Times(int multiplier) =>
+        new Dollar(Amount * multiplier);
 }
