@@ -6,6 +6,7 @@ public class Dollar
     
     public Dollar(int amount)
     {
+        Amount = amount;
     }
 
     public void Times(int times)
