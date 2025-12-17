@@ -12,5 +12,7 @@ We track our progress with the following To-Do list:
 - [ ] Make `Amount` private
 - [x] Dollar side effects?
 - [ ] Money rounding?
-- [ ] `Equals()`
+- [x] `Equals()`
 - [ ] `GetHashCode()`
+- [ ] Equal null
+- [ ] Equal object

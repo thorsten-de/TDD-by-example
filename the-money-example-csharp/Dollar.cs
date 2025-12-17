@@ -1,6 +1,8 @@
+using System.Diagnostics;
+
 namespace Tdd.Money;
 
-public class Dollar
+public class Dollar: IEquatable<Dollar>
 {
     public int Amount { get; private set; }
     
@@ -12,5 +14,12 @@ public class Dollar
     public Dollar Times(int multiplier) =>
         new Dollar(Amount * multiplier);
 
-    public override bool Equals(object? _) => true;
+
+    public bool Equals(Dollar? other) =>
+        other is not null &&
+        Amount == other.Amount;
+
+    public override bool Equals(object? other) =>
+        other is Dollar dollar && Equals(dollar);
+
 }
