@@ -3,8 +3,10 @@
 public class MoneyTest
 {
     [Fact]
-    public void TheTruth()
+    public void TestMultiplicaton()
     {
-        Assert.True(true);
+        Dollar five = new Dollar(5);
+        five.times(2);
+        Assert.Equal(10, five.Amount);
     }
 }
