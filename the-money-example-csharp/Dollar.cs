@@ -2,7 +2,7 @@ namespace Tdd.Money;
 
 public class Dollar
 {
-    public int Amount { get; private set; } = 10;
+    public int Amount { get; private set; } = 2 * 5;
     
     public Dollar(int amount)
     {
