@@ -1,5 +1,3 @@
-using System.Diagnostics;
-
 namespace Tdd.Money;
 
 public class Dollar: IEquatable<Dollar>
