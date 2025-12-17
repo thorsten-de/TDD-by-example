@@ -1,6 +1,6 @@
 namespace Tdd.Money;
 
-public class Dollar: IEquatable<Dollar>
+public class Dollar: Money, IEquatable<Dollar>
 {
     private readonly int _amount;
     
