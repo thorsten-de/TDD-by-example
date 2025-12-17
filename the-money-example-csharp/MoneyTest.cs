@@ -6,11 +6,8 @@ public class MoneyTest
     public void TestMultiplication()
     {
         Dollar five = new Dollar(5);
-        Dollar product = five.Times(2);
-        Assert.Equal(new Dollar(10), product);
-        
-        product = five.Times(3);
-        Assert.Equal(new Dollar(15), product);
+        Assert.Equal(new Dollar(10), five.Times(2));
+        Assert.Equal(new Dollar(15), five.Times(3));
     }
     
     [Fact]
