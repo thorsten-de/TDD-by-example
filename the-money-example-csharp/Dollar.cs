@@ -11,6 +11,6 @@ public class Dollar
 
     public void Times(int multiplier)
     {
-        Amount = multiplier * Amount;
+        Amount *= multiplier;
     }
 }
