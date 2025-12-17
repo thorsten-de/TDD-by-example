@@ -7,4 +7,5 @@ We expect it to be quite straight-forward, as no paradigm shift is required.
 
 We track our progress with the following To-Do list:
 
-- [ ] Replace template test
+- [ ] `$5 + 10 CHF = $10` if rate is `2:1`
+- [ ] `$5 * 2 = $10`
