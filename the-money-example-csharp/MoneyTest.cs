@@ -9,7 +9,15 @@ public class MoneyTest
         Assert.Equal(new Dollar(10), five.Times(2));
         Assert.Equal(new Dollar(15), five.Times(3));
     }
-    
+
+    [Fact]
+    public void TestFrancMultiplication()
+    {
+        Franc five = new Franc(5);
+        Assert.Equal(new Franc(10), five.Times(2));
+        Assert.Equal(new Franc(15), five.Times(3));
+    }
+
     [Fact]
     public void TestEquality()
     {
