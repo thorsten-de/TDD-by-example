@@ -2,11 +2,8 @@ namespace Tdd.Money;
 
 public class Dollar: Money, IEquatable<Dollar>
 {
-    private readonly int _amount;
-    
-    public Dollar(int amount)
+    public Dollar(int amount) :  base(amount)
     {
-        _amount = amount;
     }
 
     public Dollar Times(int multiplier) =>
