@@ -1,10 +1,10 @@
 namespace Tdd.Money;
 
-public class Franc: IEquatable<Franc>
+public class Franc: Money, IEquatable<Franc>
 {
     private readonly int _amount;
     
-    public Franc(int amount)
+    public Franc(int amount) :  base(amount)
     {
         _amount = amount;
     }
