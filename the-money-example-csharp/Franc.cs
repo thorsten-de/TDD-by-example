@@ -2,11 +2,8 @@ namespace Tdd.Money;
 
 public class Franc: Money, IEquatable<Franc>
 {
-    private readonly int _amount;
-    
     public Franc(int amount) :  base(amount)
     {
-        _amount = amount;
     }
 
     public Franc Times(int multiplier) =>
