@@ -10,7 +10,7 @@ public class Dollar
     }
 
     public void Times(int times)
-    { 
-        Amount = 2 * 5;
+    {
+        Amount = 2 * Amount;
     }
 }
