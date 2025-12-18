@@ -6,8 +6,8 @@ public class MoneyTest
     public void TestMultiplication()
     {
         Money five = Money.Dollar(5);
-        Assert.Equal(new Dollar(10), five.Times(2));
-        Assert.Equal(new Dollar(15), five.Times(3));
+        Assert.Equal(Money.Dollar(10), five.Times(2));
+        Assert.Equal(Money.Dollar(15), five.Times(3));
     }
 
     [Fact]
@@ -21,11 +21,11 @@ public class MoneyTest
     [Fact]
     public void TestEquality()
     {
-        Assert.Equal(new Dollar(5), new Dollar(5));
-        Assert.NotEqual(new Dollar(5), new Dollar(6));
+        Assert.Equal(Money.Dollar(5), Money.Dollar(5));
+        Assert.NotEqual(Money.Dollar(5), Money.Dollar(6));
         Assert.Equal(new Franc(5), new Franc(5));
         Assert.NotEqual(new Franc(5), new Franc(6));
 
-        Assert.NotEqual<Money>(new Franc(5), new Dollar(5));
+        Assert.NotEqual<Money>(new Franc(5), Money.Dollar(5));
     }
 }
