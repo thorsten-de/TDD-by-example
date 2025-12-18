@@ -6,6 +6,8 @@ public abstract class Money(int amount): IEquatable<Money>
     
     public static Money Dollar(int amount) => new Dollar(amount);
     
+    public static Money Franc(int amount) => new Franc(amount);
+    
     public abstract Money Times(int multiplier);
     
     public bool Equals(Money? other) =>
