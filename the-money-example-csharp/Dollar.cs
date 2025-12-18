@@ -8,6 +8,6 @@ public class Dollar: Money
     }
 
     public override Money Times(int multiplier) =>
-        new Dollar(_amount * multiplier, "USD");
+        new Dollar(_amount * multiplier, Currency);
     
 }
