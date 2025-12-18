@@ -1,6 +1,6 @@
 namespace Tdd.Money;
 
-public abstract class Money(int amount): IEquatable<Money>
+public abstract class Money(int amount, string currency): IEquatable<Money>
 {
     protected readonly int _amount = amount;
     
@@ -10,7 +10,7 @@ public abstract class Money(int amount): IEquatable<Money>
     
     public abstract Money Times(int multiplier);
     
-    public abstract string Currency { get; }
+    public string Currency => currency;
     
     public bool Equals(Money? other) =>
         other is not null &&
