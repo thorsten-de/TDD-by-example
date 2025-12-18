@@ -42,4 +42,14 @@ public class MoneyTest
         Money reducedSum = bank.Reduce(sum, "USD");
         Assert.Equal(Money.Dollar(10), reducedSum);
     }
+
+    [Fact]
+    public void TestPlusReturnsSum()
+    {
+        Money five = Money.Dollar(5);
+        IExpression result = five.Plus(five);
+        Assert.True(result is Sum sum);
+        Assert.Equal(five, sum.augend);
+        Assert.Equal(five, sum.addend);
+    }
 }
