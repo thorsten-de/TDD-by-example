@@ -6,6 +6,6 @@ public class Franc: Money
     {
     }
 
-    public Franc Times(int multiplier) =>
+    public Money Times(int multiplier) =>
         new Franc(_amount * multiplier);
 }
