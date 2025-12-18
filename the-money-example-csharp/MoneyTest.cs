@@ -23,16 +23,7 @@ public class MoneyTest
     {
         Assert.Equal(Money.Dollar(5), Money.Dollar(5));
         Assert.NotEqual(Money.Dollar(5), Money.Dollar(6));
-        Assert.Equal(Money.Franc(5), Money.Franc(5));
-        Assert.NotEqual(Money.Franc(5), Money.Franc(6));
-
-        Assert.NotEqual<Money>(Money.Franc(5), Money.Dollar(5));
-    }
-
-    [Fact]
-    public void TestDifferentClassEquality()
-    {
-        Assert.Equal(new Money(10, "CHF"), new Franc(10, "CHF"));
+        Assert.NotEqual(Money.Franc(5), Money.Dollar(5));
     }
 
     [Fact]

@@ -17,9 +17,9 @@ We track our progress with the following To-Do list:
 - [ ] Equal null
 - [ ] Equal object
 - [x] `5 CHF * 2 = 10 CHF`
-- [ ] Dollar/Franc duplication
+- [x] Dollar/Franc duplication
 - [x] Common equals
 - [x] Common times
 - [x] Compare Francs to Dollars
 - [x] Currency?
-- [ ] Delete tests for FrancMultiplication?
+- [x] Delete tests for FrancMultiplication?
