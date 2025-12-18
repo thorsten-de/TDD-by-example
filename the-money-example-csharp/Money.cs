@@ -4,9 +4,9 @@ public abstract class Money(int amount, string currency): IEquatable<Money>
 {
     protected readonly int _amount = amount;
     
-    public static Money Dollar(int amount) => new Dollar(amount);
+    public static Money Dollar(int amount) => new Dollar(amount, null);
     
-    public static Money Franc(int amount) => new Franc(amount);
+    public static Money Franc(int amount) => new Franc(amount, null);
     
     public abstract Money Times(int multiplier);
     
