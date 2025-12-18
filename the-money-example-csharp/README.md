@@ -21,5 +21,5 @@ We track our progress with the following To-Do list:
 - [x] Common equals
 - [ ] Common times
 - [x] Compare Francs to Dollars
-- [ ] Currency?
+- [x] Currency?
 - [ ] Delete tests for FrancMultiplication?
