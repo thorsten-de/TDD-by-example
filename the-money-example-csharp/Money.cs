@@ -1,6 +1,6 @@
 namespace Tdd.Money;
 
-public class Money(int amount, string currency): IEquatable<Money>
+public class Money(int amount, string currency): IExpression, IEquatable<Money>
 {
     protected readonly int _amount = amount;
     
@@ -23,6 +23,6 @@ public class Money(int amount, string currency): IEquatable<Money>
 
     public override string ToString() => $"{_amount} {currency}";
 
-    public Money Plus(Money addend) => 
-        new(_amount + addend._amount, Currency);
+    public IExpression Plus(Money addend) => 
+        new Money(_amount + addend._amount, Currency);
 }
