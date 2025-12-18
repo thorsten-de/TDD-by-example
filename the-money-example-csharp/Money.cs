@@ -19,4 +19,6 @@ public class Money(int amount, string currency): IEquatable<Money>
 
     public override bool Equals(object? other) =>
         other is Money money && Equals(money);
+
+    public override string ToString() => $"{_amount} {currency}";
 }
