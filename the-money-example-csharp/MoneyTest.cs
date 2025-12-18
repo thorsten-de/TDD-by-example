@@ -36,7 +36,10 @@ public class MoneyTest
     [Fact]
     public void TestSimpleAddition()
     {
-        Money sum = Money.Dollar(5).Plus(Money.Dollar(5));
-        Assert.Equal(Money.Dollar(10), sum);
+        Money five = Money.Dollar(5);
+        IExpression sum = five.Plus(five);
+        Bank bank = new Bank();
+        Money reducedSum = bank.Reduce(sum, "USD");
+        Assert.Equal(Money.Dollar(10), reducedSum);
     }
 }
