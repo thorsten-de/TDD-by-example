@@ -8,7 +8,8 @@ public class Money(int amount, string currency): IEquatable<Money>
     
     public static Money Franc(int amount) => new Franc(amount, "CHF");
 
-    public virtual Money Times(int multiplier) => null!;
+    public Money Times(int multiplier) =>
+        new Money(_amount * multiplier, Currency);
     
     public string Currency => currency;
     
@@ -21,4 +22,5 @@ public class Money(int amount, string currency): IEquatable<Money>
         other is Money money && Equals(money);
 
     public override string ToString() => $"{_amount} {currency}";
+
 }
