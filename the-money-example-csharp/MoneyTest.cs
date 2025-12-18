@@ -32,4 +32,11 @@ public class MoneyTest
         Assert.Equal("USD", Money.Dollar(1).Currency);
         Assert.Equal("CHF", Money.Franc(1).Currency);
     }
+    
+    [Fact]
+    public void TestSimpleAddition()
+    {
+        Money sum = Money.Dollar(5).Plus(Money.Dollar(5));
+        Assert.Equal(Money.Dollar(10), sum);
+    }
 }
