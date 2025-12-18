@@ -10,6 +10,8 @@ public abstract class Money(int amount): IEquatable<Money>
     
     public abstract Money Times(int multiplier);
     
+    public abstract string Currency { get; }
+    
     public bool Equals(Money? other) =>
         other is not null &&
         _amount == other._amount &&
