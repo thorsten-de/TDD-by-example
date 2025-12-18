@@ -4,6 +4,8 @@ public class Money(int amount): IEquatable<Money>
 {
     protected readonly int _amount = amount;
     
+    public static Money Dollar(int amount) => new Dollar(amount);
+    
     public bool Equals(Money? other) =>
         other is not null &&
         _amount == other._amount &&
