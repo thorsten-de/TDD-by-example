@@ -15,7 +15,7 @@ public class Money(int amount, string currency): IEquatable<Money>
     public bool Equals(Money? other) =>
         other is not null &&
         _amount == other._amount &&
-        GetType() == other.GetType();
+        Currency == other.Currency;
 
     public override bool Equals(object? other) =>
         other is Money money && Equals(money);
