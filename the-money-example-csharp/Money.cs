@@ -23,4 +23,6 @@ public class Money(int amount, string currency): IEquatable<Money>
 
     public override string ToString() => $"{_amount} {currency}";
 
+    public Money Plus(Money addend) => 
+        new(_amount + addend._amount, Currency);
 }
