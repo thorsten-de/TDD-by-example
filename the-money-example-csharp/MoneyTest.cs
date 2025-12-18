@@ -28,4 +28,11 @@ public class MoneyTest
 
         Assert.NotEqual<Money>(Money.Franc(5), Money.Dollar(5));
     }
+
+    [Fact]
+    public void TestCurrency()
+    {
+        Assert.Equal("USD", Money.Dollar(1).Currency);
+        Assert.Equal("CHF", Money.Franc(1).Currency);
+    }
 }
