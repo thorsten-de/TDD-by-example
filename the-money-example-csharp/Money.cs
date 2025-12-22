@@ -8,7 +8,7 @@ public class Money(int amount, string currency): IExpression, IEquatable<Money>
     
     public static Money Franc(int amount) => new Money(amount, "CHF");
 
-    public Money Times(int multiplier) =>
+    public IExpression Times(int multiplier) =>
         new Money(Amount * multiplier, Currency);
     
     public string Currency => currency;
@@ -23,7 +23,7 @@ public class Money(int amount, string currency): IExpression, IEquatable<Money>
 
     public override string ToString() => $"{Amount} {currency}";
 
-    public IExpression Plus(Money addend) => 
+    public IExpression Plus(IExpression addend) => 
         new Sum(this, addend);
 
     public Money Reduce(Bank bank, string to)

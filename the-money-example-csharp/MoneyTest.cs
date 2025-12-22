@@ -103,7 +103,7 @@ public class MoneyTest
     public void TestMixedAddition()
     {
         Money fiveBucks = Money.Dollar(5);
-        Money tenFrancs = Money.Franc(10);
+        IExpression tenFrancs = Money.Franc(10);
         
         Bank bank = new Bank();
         bank.AddRate("CHF", "USD", 2);
