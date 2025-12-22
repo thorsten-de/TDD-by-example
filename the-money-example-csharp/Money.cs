@@ -24,5 +24,5 @@ public class Money(int amount, string currency): IExpression, IEquatable<Money>
     public override string ToString() => $"{_amount} {currency}";
 
     public IExpression Plus(Money addend) => 
-        new Money(_amount + addend._amount, Currency);
+        new Sum(this, addend);
 }
