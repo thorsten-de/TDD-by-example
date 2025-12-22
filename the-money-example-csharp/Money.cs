@@ -25,6 +25,14 @@ public class Money(int amount, string currency): IExpression, IEquatable<Money>
 
     public IExpression Plus(Money addend) => 
         new Sum(this, addend);
-    
-    public Money Reduce(string to) => this;
+
+    public Money Reduce(string to)
+    {
+        int rate = (currency, to) switch
+        {
+            ("CHF", "USD") => 2,
+            _ => 1
+        };
+        return new Money(Amount / rate, to);
+    }
 }
