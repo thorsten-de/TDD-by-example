@@ -80,4 +80,16 @@ public class MoneyTest
         
         Assert.Equal(Money.Dollar(1), result);
     }
+    
+    [Fact]
+    public void ArraysShouldNotBeEqual()
+    {
+        Assert.False(new[] { "USD" } == new[] { "USD" });
+    }
+
+    [Fact]
+    public void TuplesShouldBeEqual()
+    {
+        Assert.True(("USD", "CHF")  == ("USD", "CHF"));
+    }
 }
