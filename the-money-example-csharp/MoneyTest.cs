@@ -53,4 +53,13 @@ public class MoneyTest
         Assert.Equal(five, sum.augend);
         Assert.Equal(five, sum.addend);
     }
+
+    [Fact]
+    public void TestReduceSum()
+    {
+        IExpression sum = new Sum(Money.Dollar(3), Money.Dollar(4));
+        Bank bank = new Bank();
+        Money result = bank.Reduce(sum, "USD");
+        Assert.Equal(Money.Dollar(7), result);
+    }
 }
