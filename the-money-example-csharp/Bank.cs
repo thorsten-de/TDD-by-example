@@ -11,5 +11,6 @@ public class Bank
     }
 
     public int Rate(string from, string to) => 
-        _rates.GetValueOrDefault((from, to));
+        _rates.TryGetValue((from, to), out var rate) 
+            ? rate : 1;
 }

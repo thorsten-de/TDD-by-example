@@ -80,6 +80,12 @@ public class MoneyTest
         
         Assert.Equal(Money.Dollar(1), result);
     }
+
+    [Fact]
+    public void IdentityRateShouldBeOne()
+    {
+        Assert.Equal(1, new Bank().Rate("USD", "USD"));
+    }
     
     [Fact]
     public void ArraysShouldNotBeEqual()
@@ -92,4 +98,5 @@ public class MoneyTest
     {
         Assert.True(("USD", "CHF")  == ("USD", "CHF"));
     }
+    
 }
