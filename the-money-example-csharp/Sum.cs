@@ -11,5 +11,5 @@ public class Sum: IExpression
         this.addend = addend;
     }
 
-    public Money Reduce(string to) => new(augend.Amount + addend.Amount, to);
+    public Money Reduce(Bank _, string to) => new(augend.Amount + addend.Amount, to);
 }
