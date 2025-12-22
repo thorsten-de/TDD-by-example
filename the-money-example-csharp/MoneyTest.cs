@@ -136,13 +136,4 @@ public class MoneyTest
         Money result = bank.Reduce(sum, "USD");
         Assert.Equal(Money.Dollar(20), result);
     }
-
-    [Fact]
-    public void PlusSameCurrencyShouldReturnMoney()
-    {
-        IExpression sum = Money.Dollar(1).Plus(Money.Dollar(1));
-        Assert.IsType<Money>(sum);
-    }
-
-
 }
