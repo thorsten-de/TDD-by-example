@@ -15,4 +15,7 @@ public class Sum: IExpression
         new(augend.Reduce(bank, to).Amount + addend.Reduce(bank, to).Amount, to);
 
     public IExpression Plus(IExpression addend) => new Sum(this, addend);
+
+    public IExpression Times(int multiplier) => 
+        new Sum(augend.Times(multiplier), addend.Times(multiplier));
 }
