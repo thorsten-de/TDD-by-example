@@ -14,7 +14,7 @@ We track our progress with the following To-Do list:
 - [x] Reduce Money with conversion
 - [x] Reduce(Bank, String)
 - [x] Sum.Plus
-- [ ] Expression.Times
+- [x] Expression.Times
 - [x] `$5 * 2 = $10`
 - [x] Make `Amount` private
 - [x] Dollar side effects?
