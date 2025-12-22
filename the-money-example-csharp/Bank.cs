@@ -7,4 +7,11 @@ public class Bank
     public void AddRate(string from, string to, int rate)
     {
     }
+
+    public int Rate(string from, string to) =>
+        (from, to) switch
+        {
+            (from: "CHF", to: "USD") => 2,
+            _ => 1
+        };
 }

@@ -28,11 +28,8 @@ public class Money(int amount, string currency): IExpression, IEquatable<Money>
 
     public Money Reduce(Bank bank, string to)
     {
-        int rate = (currency, to) switch
-        {
-            ("CHF", "USD") => 2,
-            _ => 1
-        };
+        int rate = bank.Rate(Currency, to);
         return new Money(Amount / rate, to);
     }
+
 }
