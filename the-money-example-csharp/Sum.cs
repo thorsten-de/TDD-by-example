@@ -14,5 +14,5 @@ public class Sum: IExpression
     public Money Reduce(Bank bank, string to) => 
         new(augend.Reduce(bank, to).Amount + addend.Reduce(bank, to).Amount, to);
 
-    public IExpression Plus(IExpression addend) => null;
+    public IExpression Plus(IExpression addend) => new Sum(this, addend);
 }

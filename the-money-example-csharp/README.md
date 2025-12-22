@@ -13,7 +13,7 @@ We track our progress with the following To-Do list:
 - [x] Bank.reduce(Money)
 - [x] Reduce Money with conversion
 - [x] Reduce(Bank, String)
-- [ ] Sum.Plus
+- [x] Sum.Plus
 - [ ] Expression.Times
 - [x] `$5 * 2 = $10`
 - [x] Make `Amount` private
