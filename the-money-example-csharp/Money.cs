@@ -25,4 +25,6 @@ public class Money(int amount, string currency): IExpression, IEquatable<Money>
 
     public IExpression Plus(Money addend) => 
         new Sum(this, addend);
+    
+    public Money Reduce(string to) => this;
 }
