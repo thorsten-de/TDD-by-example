@@ -48,7 +48,8 @@ public class MoneyTest
     {
         Money five = Money.Dollar(5);
         IExpression result = five.Plus(five);
-        Assert.True(result is Sum sum);
+        
+        Sum sum = (Sum)result;
         Assert.Equal(five, sum.augend);
         Assert.Equal(five, sum.addend);
     }
