@@ -62,4 +62,12 @@ public class MoneyTest
         Money result = bank.Reduce(sum, "USD");
         Assert.Equal(Money.Dollar(7), result);
     }
+
+    [Fact]
+    public void TestReduceMoney()
+    {
+        Bank bank = new Bank();
+        Money result = bank.Reduce(Money.Dollar(1), "USD");
+        Assert.Equal(Money.Dollar(1), result);
+    }
 }

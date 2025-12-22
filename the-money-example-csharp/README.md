@@ -9,6 +9,8 @@ We track our progress with the following To-Do list:
 
 - [ ] `$5 + 10 CHF = $10` if rate is `2:1`
 - [ ] `$5 + $5 = $10`
+- [ ] Return Money from `$5 + $5`
+- [ ] Bank.reduce(Money)
 - [x] `$5 * 2 = $10`
 - [x] Make `Amount` private
 - [x] Dollar side effects?
