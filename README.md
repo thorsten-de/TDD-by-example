@@ -1,6 +1,6 @@
 # Test-driven Development by Example
 
-This repository is my walk-trough for the seminal book by Kent Beck.
+This repository is my walk-through for the seminal book by Kent Beck.
 
 ## Part I - The Money Example
 
@@ -14,3 +14,7 @@ turns out, there is quite a shift in paradigms between Rust and the original
 code examples. To get a better feeling for the original solution, we first
 implement it in C#.
 
+## Part II - The xUnit Example
+
+This example develops a testing framework in Python test-first. As this is a good opportunity 
+to refresh my rusty python skills, I'll follow the example to the book in [The xUnit Example](./the-xUnit-example/README.md).
