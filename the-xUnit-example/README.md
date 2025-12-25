@@ -5,7 +5,7 @@ the tests. We use Python here.
 
 ## To-Do list
 
-- [ ] Invoke test method
+- [x] Invoke test method
 - [ ] Invoke setUp first
 - [ ] Invoke tearDown afterward
 - [ ] Invoke tearDown even if the test method fails
