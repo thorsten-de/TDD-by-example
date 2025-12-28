@@ -12,4 +12,5 @@ the tests. We use Python here.
 - [ ] Run multiple tests
 - [x] Report collected results
 - [x] Log string in WasRun
-- [ ] Report failed tests
+- [x] Report failed test`
+- [ ] Catch and report `setUp` errors
